@@ -4,7 +4,7 @@
     <title>Exemplo</title>
     <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script>    
     
     <style type="text/css"> </style> 
 </head>
