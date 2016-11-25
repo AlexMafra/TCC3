@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script>    
-    
+
     <style type="text/css"> </style> 
 </head>
 <body>    
@@ -19,6 +19,9 @@
     <div id="conteudo"></div>
 </body>
 <script>
+	function carregar2(pagina){
+		$(#teste).load(page);
+	}
     function carregar(pagina){
         $("#conteudo").load(pagina);
     }
