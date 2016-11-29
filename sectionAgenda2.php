@@ -1,5 +1,6 @@
 <?php
 include_once ("principal2.php");
+require_once ("verificaSessao.php");
 ?>
 <html lang="pt-br">
 <head>
@@ -25,7 +26,7 @@ include_once ("principal2.php");
 		<label for="tab1">AGENDA</label>
 		<div>
 		<ul>
-            <li><a onclick="carregar('preparaagenda.php?var=1')" href="#">Próximo Mês</a></li>
+            <li><a onclick="carregar('preparaagenda.php?var=1')" href="#"	>Próximo Mês</a></li>
             <li><a onclick="carregar('preparaagenda.php?var=-1')" href="#">Mês Anterior</a></li>
             <li><a onclick="carregar('preparaagenda.php')" href="#">Mês Atual</a></li>
         </ul>

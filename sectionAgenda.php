@@ -1,5 +1,5 @@
 <?php
-//require_once ("verificaSessao.php");
+require_once ("verificaSessao.php");
 include_once ("principal2.php");
 ?>
 <html lang="pt-br">

@@ -60,8 +60,11 @@ include_once ("principal.php");
 				<label for="usuário">Advogado</label> 
 				<input type="text" name="adv" id="adv" required style="width:360px; margin-left:40px;" class="form-control"/>
 				
+				<label for="usuário">CPF</label> 
+				<input type="text" name="cpfa" id="cpfa" required style="width:360px; margin-left:40px;" class="form-control"/>
+				
 				<label for="usuário" style="margin-left:54px;">OAB</label>
-				<input type="text" name="oab" id="oab" required style="margin-left:22px;" class="form-control"/>
+				<input type="text" name="oab" id="oab"  style="margin-left:22px;" class="form-control"/>
 			</div>
 
 			<div>

@@ -1,18 +1,15 @@
 <?php
 	$login =$_POST["login"];
-	$pas =$_POST["senha"];
+	$pas =$_POST["pass"];
 	$tipo =$_POST["tipo"];
 	$pass=md5($pas);
-	echo $pass;
 	require_once('config/conn.php');
+	echo $pas;
 
 	if ( $tipo == "cli"){
 		$statement = $pdo->query("SELECT cpf FROM cliente WHERE cpf='$login' AND senha='$pass'");
 		$registro = $statement->fetch();
-		$id=$registro['cpf'];
-		echo $id;		
-		echo "TESTATATTATATATATTATATATA";
-		
+		$id=$registro['cpf'];		
 	}
 	else{
 		
@@ -38,7 +35,7 @@
 ?> 
 	<script>
 		alert('Usuário ou Senha inválidos');  
-		window.setTimeout("location='loginUnico.html';");
+		window.setTimeout("location='loginUnico.php';");
 	</script>;
 <?php
 }

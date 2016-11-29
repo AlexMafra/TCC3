@@ -93,9 +93,6 @@ include_once ("principal2.php");
 				<input type="text" name="profissao" id="profissao" style="width:255px; margin-left:7px;" class="form-control"/>
 			</div>
 			<div>
-			
-			
-			
 			</div>	
 	
 		</div>

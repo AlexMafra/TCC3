@@ -28,6 +28,20 @@
 		
 		$inserir = $insere->execute();
 		
-		echo $idusuario;
-
+		if($inserir){
+			?> 
+				<script>
+					alert('Agendamento efetuado com sucesso');  
+					window.setTimeout("location='sectionagenda2.php';");
+				</script>
+			<?php
+		}
+			else{
+?> 
+				<script>
+					alert('Houve um erro durante agendamento, favor  conferir os dados e inserir novamente');  
+					window.setTimeout("location='formagenda2.php';");
+				</script>;
+			<?php
+			}
 ?>

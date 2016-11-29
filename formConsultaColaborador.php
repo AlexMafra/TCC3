@@ -1,5 +1,6 @@
 <?php
 include_once ("principal.php");
+include_once ("verificasessao.php");
 ?>
 <html lang="pt-br">
 <head>

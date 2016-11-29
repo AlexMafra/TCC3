@@ -13,19 +13,19 @@
         <ul id="menu">
 			<h1>Agenda</h1><br>
 			<hr>
-            <a href="sectionAgenda.php?pg=<?php echo base64_encode('sectionAgenda.php');?>&titulo=<?php echo base64_encode('Agenda');?>">
+            <a href="sectionAgenda.php">
 				<li>Inicio</li>
             </a>
 			<hr>
-			<a href="preparaAgenda.php?pg=<?php echo base64_encode('preparaAgenda.php');?>&titulo=<?php echo base64_encode('Agendar');?>">	
+			<a href="sectionagenda2.php">	
 				<li>Agendar</li>
             </a>
             <hr> 
-			<a href="secPesqAgenda.html">
+			<a href="consultaagenda.php">
 				<li>Pesquisar</li>
             </a>
 			<hr>
-			<a href="logout.html">
+			<a href="logout.php">
 				<li>Sair</li>
             </a>
 			<hr>
