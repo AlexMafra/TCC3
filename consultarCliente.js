@@ -1,6 +1,6 @@
 $(document).ready( function() {
    /* Executa a requisição quando o campo CEP perder o foco */
-   $('#cpf').blur(function(){
+   $(document).ready(function (){
            /* Configura a requisição AJAX */
            $.ajax({
                 url : 'consultarCliente.php', /* URL que será chamada */ 
@@ -24,6 +24,18 @@ $(document).ready( function() {
 						$('#emissor').val(data.emissor);
 						$('#email').val(data.email);
 						$('#cargo').val(data.cargo);
+						$('#endereco').val(data.logr);
+						$('#bairro').val(data.bairro);
+						$('#cidade').val(data.cidade);
+						$('#uf').val(data.uf);
+						$('#pais').val(data.pais);
+						$('#cep').val(data.cep);
+						$('#complemento').val(data.compl);
+						
+						$('#oab').val(data.oab);
+						$('#cep').val(data.emailpessoal);
+			
+						
                         $('#nome').focus();
                     }
                 }

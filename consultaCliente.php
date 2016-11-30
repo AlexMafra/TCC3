@@ -1,6 +1,12 @@
 <?php
-//require_once ("verificaSessao.php");
+require_once ("verificaSessao.php");
 include_once ("principal2.php");
+require_once('config/conn.php');
+$tr=$_SESSION['usuario'];
+$stmt = $pdo->query("select * from cliente");
+
+?>
+
 ?>
 <html lang="pt-br">
 <head>
@@ -25,78 +31,32 @@ include_once ("principal2.php");
 		<label for="tab1">Consultar Cliente</label>
 		<div>
 			<div class="row">
-			<div>
-			<input type="text" name="tipo" id="tipo" value = "cliente" class="form-control" hidden />
+			<table border = 3>
 			
-			<label for="usuário">CPF</label>
-				<input type="text" name="cpf" id="cpf" class="form-control"/>
-			</div>
+			<tr>
+                        <td>Cliente</td>
+                        <td>CPF</td>
+						
+            </tr>
 			
-			<div>
-				<label for="usuário">Nome</label>
-				<input type="text" name="nome" id="nome" style="width:380px; margin-left:8px;" class="form-control"/>
-				<label for="usuário" style="margin-left:65px;">Nascimento</label>
-				<input type="text" name="dataNascimento" id="dataNascimento" class="form-control"/>
+			<?php while ($lista = $stmt->fetchObject()): ?>
+			<?php 
+				$ct=$lista->cpfCliente;
+				$nuser = $pdo->query("SELECT nome FROM Cliente WHERE cpf='$ct'");
+				$ftsr = $nuser->fetch();
+		
+			?>
+            <tr>
+                        
+						<td> <?php echo $lista->cpf ?>  </td>
+						<td> <?php echo $lista->nome ?>  </td>
+						<td> <a href="detalhecliente.php?cpc=<?php echo $lista->cpf?>"> <img src = "lp.jpg"> </a> </td>
+            </tr>
+			<?php endwhile ?>	
 			</div>
-			<div>
-				<label for="usuário">Sexo</label>
-				<input type="text" name="sexo" id="sexo" style="margin-left:22px;" class="form-control"/>
-				<label for="usuário" style="margin-left:272px;">Estado Civil</label>
-				<input type="text" name="estadoCivil" id="estadoCivil" class="form-control"/>
-			</div>
-			<div>
-				
-				<label for="usuário" style="margin-left:30px;">RG</label>
-				<input type="text" name="rg" id="rg" class="form-control"/>
-				<label for="usuário" style="margin-left:30px;">Emissor</label>
-				<input type="text" name="emissor" id="emissor" class="form-control"/>
-			</div>
-			<div>
-				<label for="usuário">Endereço</label>
-				<input type="text" name="endereco" id="endereco" style="width:418px; margin-left:8px;" class="form-control"/>
-				<label for="usuário" style="margin-left:57px;">Bairro</label>
-				<input type="text" name="bairro" id="bairro" class="form-control"/>
-			</div>
-			
-			<div>
-				<label for="usuário">Complemento</label>
-				<input type="text" name="complemento" id="complemento" style="width:365px; margin-left:8px;" class="form-control"/>
-				<label for="usuário" style="margin-left:75px;">CEP</label>
-				<input type="text" name="cpdcli" id="cpfcli" class="form-control"/>
-			</div>
-			<div>
-				<label for="usuário">Cidade</label>
-				<input type="text" name="cidade" id="cidade" style="width:300px; margin-left:12px;" class="form-control"/>
-				<label for="usuário" style="margin-left:46px;">Natural</label>
-				<input type="text" name="naturalidade" id="naturalidade" style="margin-left:12px;" class="form-control"/>
-				<label for="usuário" style="margin-left:43px;">UF</label>
-				<input type="text" name="uf" id="uf" style="width:50px; margin-left:12px;" class="form-control"/>
-			</div>
-			<div>
-				<label for="usuário">País</label>
-				<input type="text" name="pais" id="pais" style="width:230px; margin-left:47px;" class="form-control"/>
-				<label for="usuário" style="margin-left:138px;">Nacionalidade</label>
-				<input type="text" name="nacionalidade" id="nacionalidade" style="width:200px;" class="form-control"/>
-			</div>
-			<div>
-				<label for="usuário">Telefone</label>
-				<input type="text" name="telResid" id="telResid" style="margin-left:0px;" class="form-control"/>
-				<label for="usuário">Celular</label>
-				<input type="text" name="telCel" id="telCel" style="margin-left:0px;" class="form-control"/>
-				<label for="usuário" style="margin-left:70px;">Email</label>
-				<input type="text" name="emailPessoal" id="emailPessoal" style="width:255px;" class="form-control"/>
-			</div>
-			<div>
-				<label for="usuário">Escolaridade</label>
-				<input type="text" name="escolaridade" id="escolaridade" style="width:288px; margin-left:7px;" class="form-control"/>
-				<label for="usuário" style="margin-left:47px;">Profissão</label>
-				<input type="text" name="profissao" id="profissao" style="width:255px; margin-left:7px;" class="form-control"/>
-			</div>
-			<div>
-			</div>	
-	
-		</div>
 		</div>
 	</div>
 </body>
 </html>
+
+

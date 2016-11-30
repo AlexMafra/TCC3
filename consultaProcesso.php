@@ -1,6 +1,9 @@
 <?php
-//require_once ("verificaSessao.php");
+require_once ("verificaSessao.php");
 include_once ("principal2.php");
+require_once('config/conn.php');
+$tr=$_SESSION['usuario'];
+$stmt = $pdo->query("select * from processo");
 ?>
 <html lang="pt-br">
 <head>
@@ -13,7 +16,7 @@ include_once ("principal2.php");
 	<title>Consultar Processo</title>
 
 </head>
-	<body onload="agenda2(); agenda()"  >
+	<body>
 	<div id="section">
 		<div class="tabs-container">
     
@@ -26,12 +29,34 @@ include_once ("principal2.php");
 			<div>
 				<label for="usuário" style="margin-left:54px;">CPF</label>
 				<input type="text" name="cpf" id="cpf" required style="margin-left:22px;" class="form-control"/>
-				
-				<label for="usuário">Cliente</label>
-				<input type="text" name="nome" id="nome" required style="width:360px; margin-left:79px;" class="form-control"/>
-				
-				
 			</div>
+			<table border = 3>
+			
+			<tr>
+                        <td>Processo</td>
+                        <td>Cliente</td>
+						
+						
+            </tr>
+			
+			<?php while ($lista = $stmt->fetchObject()): ?>
+			<?php 
+				$ct=$lista->cpf;
+				$nuser = $pdo->query("SELECT nome FROM cliente WHERE cpf='$ct'");
+				$ftsr = $nuser->fetch();
+		
+			?>
+            <tr>
+                        
+						<td> <?php echo $lista->numero ?>  </td>
+						<td> <?php echo $ftsr['nome'] ?>  </td>
+						
+						<td> <a href="detalheprocesso.php?cpc=<?php echo $lista->numero?>"> <img src = "lp.jpg"> </a> </td>
+            </tr>
+			<?php endwhile ?>	
+			</table>
+			
+			
 			</div>
 			
 		</div>

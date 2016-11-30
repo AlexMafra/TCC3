@@ -8,6 +8,9 @@ include_once ("principal2.php");
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="boots.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script>
+	<script src="http://www.w3schools.com/lib/w3data.js"></script>    
+
 	<title>SectionAgenda</title>
 	<script>
 		function agenda() {
@@ -30,6 +33,7 @@ include_once ("principal2.php");
 		<div>
 			<div id="metade1">
 				<h1> Agenda do dia atual</h1>
+				
 				<p id="dia">
 			</div>
 			

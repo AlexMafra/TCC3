@@ -9,7 +9,7 @@ require_once("verificaSessao.php");
 	$cpfColaborador=$_SESSION['usuario'];
 	
 
-		$insere = $pdo->prepare("DELETE FROM agenda WHERE dia= :dia and mes= :mes and ano= :ano and horario= :horario  and cpfcliente = :cpfcliente and cpfcolaborador= :cpfColaborador ");
+		$insere = $pdo->prepare("DELETE FROM agenda WHERE dia= ':dia' and mes= ':mes' and ano= ':ano' and horario= ':horario'  and cpfcliente = ':cpfcliente' and cpfcolaborador= :cpfColaborador ");
 		
 		$insere->bindParam( ":dia", $dia, PDO::PARAM_INT);
 		$insere->bindParam( ":mes", $mes, PDO::PARAM_INT);

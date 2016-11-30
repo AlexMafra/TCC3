@@ -1,5 +1,6 @@
 <?php
 include_once ("principal.php");
+require_once ("verificaSessao.php");
 ?>
 <html lang="pt-br">
 <head>

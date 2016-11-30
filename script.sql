@@ -78,12 +78,12 @@ titulo int
 
 create table processo(
 cpf varchar (11),
-numero varchar (15),
+numero varchar (25),
 comarca varchar (25),
 vara varchar (15),
 competencia varchar (25),
 assunto varchar (15),
-advogado varchar (11),
+cpfadv varchar (11),
 origem varchar(25)
 );
 
