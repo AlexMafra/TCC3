@@ -5,15 +5,15 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="boots.css">
+
   
 </head>
 <body>
-		<CENTER>
-			<footer>
-			<hr>
-				Linguagem de Programação Web @ FAETERJ-Rio<br>
-				Developed by Alex Mafra & Renan Vieira - Email:carioca.5@bol.com.br
-			</footer>
-		</CENTER>
+	<div class="page-header">
+
+		<a href="sectionAgenda.php">
+			<CENTER><img src="LogoTCC.jpg" class="img-responsive" alt="Thompson & Vasconcellos"></CENTER>
+		</a>
+
+	</div>
 </body>
-</html>

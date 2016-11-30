@@ -6,30 +6,32 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="boots.css">
 
-  
+
 </head>
 <body>
-	<div id="nav">
-        <ul id="menu">
-			<h1>Agenda</h1><br>
-			<hr>
-            <a href="sectionAgenda.php">
-				<li>Inicio</li>
-            </a>
-			<hr>
-			<a href="sectionagenda2.php">	
-				<li>Agendar</li>
-            </a>
-            <hr> 
-			<a href="consultaagenda.php">
-				<li>Pesquisar</li>
-            </a>
-			<hr>
-			<a href="logout.php">
-				<li>Sair</li>
-            </a>
-			<hr>
-        </ul>
-    </div>
+		<div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+						<h1>Agenda</h1><br>
+						<hr>
+						<a href="sectionAgenda.php">
+							<li>Inicio</li>
+						</a>
+						<hr>
+						<a href="sectionagenda2.php">	
+							<li>Agendar</li>
+						</a>
+						<hr> 
+						<a href="consultaagenda.php">
+							<li>Pesquisar</li>
+						</a>
+						<hr>
+						<a href="logout.php">
+							<li>Sair</li>
+						</a>
+						<hr>
+					</ul>
+				</div>
+		</div>
 </body>
 </html>

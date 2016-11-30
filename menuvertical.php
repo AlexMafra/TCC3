@@ -9,27 +9,29 @@
 
 </head>
 <body>
-	<div id="nav">
-        <ul id="menu">
-			<h1>Pastas</h1><br>
-			<hr>
-			<a href="sectionAgenda.php?pg=<?php echo base64_encode('sectionAgenda.php');?>&titulo=<?php echo base64_encode('Agenda');?>">
-				<li>INICIO</li>
-            </a>
-			<hr>
-            <a href="entrar.html">
-				<li>ADVOGADOS</li>
-            </a>
-			<hr>
-			<a href="registrar.html">
-				<li>CLIENTES</li>
-            </a>
-            <hr>
-			<a href="logout.html">
-				<li>SAIR</li>
-            </a>
-			<hr>
-        </ul>
-    </div>
+		<div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+						<h1>Pastas</h1><br>
+						<hr>
+						<a href="sectionAgenda.php">
+							<li>INICIO</li>
+						</a>
+						<hr>
+						<a href="entrar.html">
+							<li>ADVOGADOS</li>
+						</a>
+						<hr>
+						<a href="registrar.html">
+							<li>CLIENTES</li>
+						</a>
+						<hr>
+						<a href="logout.html">
+							<li>SAIR</li>
+						</a>
+						<hr>
+					</ul>
+				</div>
+		</div>
 </body>
 </html>

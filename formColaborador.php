@@ -1,131 +1,244 @@
-<?php
-include_once ("principal.php");
-require_once ("verificaSessao.php");
-?>
+
 <html lang="pt-br">
 <head>
+	<meta name="keywords" content="HTML5,javascript">
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="boots.css">
 	<script type='text/javascript' src='http://files.rafaelwendel.com/jquery.js'></script>
 	<script type='text/javascript' src='cep.js'></script>
-  <title>FormColaborador</title>
- <script>
-function validaSenha (input){ 
-	if (input.value != document.getElementById('txtSenha').value) {
-    input.setCustomValidity('Repita a senha corretamente');
-  } else {
-    input.setCustomValidity('');
-  }
-} 
-</script>
+	<title>FormColaborador</title>
+  
+	<script>
+	function validaSenha (input){ 
+		if (input.value != document.getElementById('txtSenha').value) {
+		input.setCustomValidity('Repita a senha corretamente');
+	  } else {
+		input.setCustomValidity('');
+	  }
+	} 
+	</script>
 </head>
+<body id="all">
+	<div class="container">
+		<div class="row center-block">
+			<div class="col-lg-12">
+			<?php 
+				include_once ("menu0.php");
+			?>
+			</div>
+		</div>
+		<div class="row center-block">
+			<div class="col-lg-12">
+			<?php 
+				include_once ("menu1.php");
+			?>
+			</div>
+		</div>
 
-<div id="section">
-    <div class="tabs-container">
-    
-    <!-- ABA 1 -->
-    <input type="radio" name="tabs" class="tabs" id="tab1" checked>
-    <label for="tab1">COLABORADOR</label>
-    <div>
-      <form name="f2" method="post" action="cadastro.php">
-				<input hidden type="text" name="tipo" id="tipo" value="colaborador" class="form-control"/>
-			<div>
-				<label for="usuário">Nome</label>
-				<input type="text" required="" name="nome" id="nome" style="width:380px; margin-left:6px;" class="form-control"/>
-				<label for="usuário" style="margin-left:70px;">Nascimento</label>
-				<input required type="tel" pattern="^\d{2}/\d{2}/\d{4}$" placeholder="xx/xx/xxxx" name="dataNascimento" id="dataNascimento" title="Informe uma data de nascimento válida no formato xx/xx/xxxx" class="form-control"/>
+		<div class="row center-block">
+			<div class="col-lg-2">
+			<?php 
+				include_once ("menuvertical.php");
+			?>
 			</div>
-			<div>
-				<label for="usuário">OAB</label>
-				<input type="tel" pattern="^\d{6}$" name="oab" id="oab" style="margin-left:22px;" class="form-control"/>
-				<label for="usuário" required style="margin-left:25px;">Sexo</label>
-				<input type="text" required name="sexo" id="sexo" style="margin-left:12px;" class="form-control"/>
-				<label for="usuário" required style="margin-left:18px;">Estado Civil</label>
-				<input type="text" name="estadoCivil" id="estadoCivil" style="margin-left:6px;" class="form-control"/>
+			<div class="col-lg-10">
+				<div id="page-wrapper">
+					<div class="col-lg-12">
+					<div class="tabbable"> <!-- Only required for left/right tabs -->
+					<ul class="nav nav-tabs nav-pills">
+						<li class="active"><a href="#tab1" data-toggle="tab">COLABORADOR</a></li>
+					</ul>
+					<div class="tab-content">
+					<div class="tab-pane active" id="tab1">
+						<form name="f2" method="post" action="cadastro.php">
+						<!--<input hidden type="text" name="tipo" id="tipo" value="cliente" class="form-control"/>-->
+							<div class="row">
+								<div class="form-group col-lg-8">
+									<label for="usuário">Nome</label>
+								<input type="text" required name="nome" id="nome" class="form-control"/>
+								</div>
+								<div class="form-group col-lg-4">
+									<label for="usuário">Nascimento</label>
+								<input required type="text" pattern="^\d{2}/\d{2}/\d{4}$" placeholder="xx/xx/xxxx" name="dataNascimento" id="dataNascimento" title="Informe uma data de nascimento válida no formato xx/xx/xxxx" class="form-control"/>
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-lg-4">
+									<label>Sexo</label>
+									<select class="form-control" name="sexo" title="O campo Sexo &eacute; obrigat&oacute;rio">
+										<option value=""></option>
+										<option value="F">Feminino</option>
+										<option value="M">Masculino</option>
+									</select>
+								</div>
+								<div class="form-group col-lg-4">
+									
+								</div>
+								<div class="form-group col-lg-4">
+									<label for="usuário" required>Estado Civil</label>
+									<input type="text" name="estadoCivil" id="estadoCivil" class="form-control"/>
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-lg-4">
+									<label for="usuário">CPF</label>
+									<input type="tel" pattern="^\d{11}$" required placeholder="xxx.xxx.xxx-xx" title="informe um CPF válido, somente os numeros "name="cpf" id="cpf" class="form-control"/>
+								</div>
+								<div class="form-group col-lg-4">
+									<label for="usuário">RG</label>
+									<input required type="tel" pattern="^\d{9}$"name="rg" placeholder="xx.xxx.xxx-x" id="rg" title="Informe um rg válido somente os numeros" class="form-control"/>
+								</div>
+								<div class="form-group col-lg-4">
+									<label for="usuário">Emissor</label>
+									<input type="text" name="emissor" id="emissor" class="form-control"/>
+								</div>
+							</div>
+							<div class="row" >
+								<div class="form-group col-lg-8">
+									<label>Endere&ccedil;o</label>
+									<input type="text" name="endereco" class="form-control" title="O campo Endere&ccedil;o &eacute; obrigat&oacute;rio" value="<?php echo $_POST['endereco']; ?>" />
+								</div>
+								<div class="form-group col-lg-4">
+									<label>Bairro</label>
+									<input type="text" name="bairro" class="form-control" title="O campo Bairro &eacute; obrigat&oacute;rio" value="<?php echo $_POST['bairro']; ?>" />
+								</div>
+							</div>
+							 <div class="row" >
+								<div class="form-group col-lg-8">
+									<label>Complemento</label>
+									<input type="text" name="complemento" class="form-control" value="<?php echo $_POST['complemento']; ?>" />
+								</div>
+								<div class="form-group col-lg-4">
+									<label>CEP</label>
+									<input name="cep" type="text" class="form-control" id="cep"  title="O campo CEP &eacute; obrigat&oacute;rio" onKeyPress="return Mascaras_Format(document.form,'cep','99.999-999',event);" value="<?php echo $_POST['cep']; ?>" maxlength="10" placeholder="" />
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-lg-5">
+									<label for="usuário">Cidade</label>
+									<input type="text" name="cidade" id="cidade" class="form-control"/>
+								</div>
+								<div class="form-group col-lg-5">
+									<label for="usuário">Natural</label>
+									<input type="text" name="naturalidade" id="naturalidade" class="form-control"/>
+								</div>
+								<div class="form-group col-lg-2">
+									<label for="usuário">UF</label>
+									<input type="text" name="uf" id="uf" class="form-control"/>
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-lg-4">
+									<label for="usuário">Pa&iacute;s</label>
+									<input type="text" name="pais" id="pais" class="form-control"/>
+								</div>
+								<div class="form-group col-lg-4">
+									
+								</div>
+								<div class="form-group col-lg-4">
+									<label for="usuário">Nacionalidade</label>
+									<input type="text" name="nacionalidade" id="nacionalidade" class="form-control"/>
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-lg-4">
+									<label>Telefone</label>
+									<input name="telefone" type="text" class="form-control" id="telefone" title="Campo Telefone &eacute; obrigat&oacute;rio" onKeyPress="return Mascaras_Format(document.form,'telefone','(99) 9999-9999',event);" value="<?php echo $_POST['telefone']; ?>" maxlength="14" placeholder="" />
+								</div>
+								<div class="form-group col-lg-2">
+								</div>
+								<div class="form-group col-lg-6">
+									<label for="usuário">Email</label>
+									<input type="email" value="" placeholder="nome@email.com" required name= "emailPessoal" id="emailPessoal" class="form-control"/>
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-lg-4">
+									<label>Celular</label>
+									<input name="celular" type="text" class="form-control" id="celular" title="Campo celular &eacute; obrigat&oacute;rio" onKeyPress="return Mascaras_Format(document.form,'celular','(99) 99999-9999',event);" value="<?php echo $_POST['celular']; ?>" maxlength="15" placeholder="" />
+								</div>
+								<div class="form-group col-lg-2">
+								</div>
+								<div class="form-group col-lg-6">
+									<label for="usuário">Escolaridade</label>
+									<input type="text" name="escolaridade" id="escolaridade" class="form-control"/>
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-lg-4">
+									<label for="usuário">OAB</label>
+									<input type="tel" pattern="^\d{6}$" name="oab" id="oab" class="form-control"/>
+								</div>
+								<div class="form-group col-lg-2">
+									
+								</div>
+								<div class="form-group col-lg-6">
+									<label for="usuário">Profissão</label>
+									<input type="text" name="profissao" id="profissao" class="form-control"/>
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-lg-5">
+									<label for="usuário">Cargo</label>
+									<input type="text" name="cargo" id="cargo" class="form-control"/>
+								</div>
+								<div class="form-group col-lg-2">
+									
+								</div>
+								<div class="form-group col-lg-5">
+									<label for="usuário">Tel Corporativo</label>
+									<input name="telCorporativo" type="text" class="form-control" id="telCorporativo" title="Campo Telefone &eacute; obrigat&oacute;rio" onKeyPress="return Mascaras_Format(document.form,'telefone','(99) 9999-9999',event);" value="<?php echo $_POST['telCorporativo']; ?>" maxlength="14" placeholder="" />
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-lg-6">
+									<label for="usuário">Email Corporativo</label>
+									<input type="email" value="" placeholder="nome@email.com" required name="emailCorporativo" id="emailCorporativo" class="form-control"/>
+								</div>
+								<div class="form-group col-lg-2">
+									
+								</div>
+								<div class="form-group col-lg-4">
+									<label for="usuário">Setor</label>
+									<input type="text" name="setor" id="setor" class="form-control"/>
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-lg-5">
+									<label for="txtsenha">Senha</label>
+									<input id="txtSenha" name="txtsenha" type="password" required placeholder="Digite uma Senha" title="Senha" class="form-control"/>
+								</div>
+								<div class="form-group col-lg-1">
+								</div>
+								<div class="form-group col-lg-6">
+									<label for="repetir_senha">Confirmar Senha</label>
+									<input id="repetir_senha" name="repetir_senha" type="password" required  placeholder="Repetir Senha" title="Repetir Senha" oninput="validaSenha(this)" class="form-control"/>
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-lg-12">
+									<button type="button" class="btn btn-primary" onClick="validar(document.form);">CANCELAR</button>
+									<button type="button" class="btn btn-primary" onClick="validar(document.form);">SALVAR</button>
+									<input name="ok" type="hidden" id="ok"></input>
+								</div>
+							</div>	
+						</form>
+					</div>
+					</div>
+					</div>
+					</div>
+				</div> <!-- div page-wrapper -->
+			</div> <!-- col-lg-10 -->
+		</div> <!-- row -->
+		<div class="row4 center-block">
+			<div class="col-lg-12">
+			<?php 
+				include_once ("rodape.php");
+			?>
 			</div>
-			<div>
-				<label for="usuário">CPF</label>
-				<input type="tel" pattern="^\d{11}$" required title="Informe um cpf válido somente os números"  name="cpf" id="cpf" style="margin-left:26px;" class="form-control"/>
-				
-				<label for="usuário" style="margin-left:30px;">RG</label>
-				<input required type="tel" pattern="^\d{9}$"name="rg" id="rg" title="Informe um RG válido somente os números" style="margin-left:28px;" class="form-control"/>
-				
-				<label for="usuário" style="margin-left:40px;">Emissor</label>
-				<input type="text" name="emissor" id="emissor" class="form-control"/>
-			</div>
-			<div>
-				<label for="usuário">Endereço</label>
-				<input type="text" name="endereco" id="endereco" style="width:418px; margin-left:8px;" class="form-control"/>
-				<label for="usuário" style="margin-left:59px;">Bairro</label>
-				<input type="text" name="bairro" id="bairro" class="form-control"/>
-			</div>
-			
-			<div>
-				<label for="usuário">Complemento</label>
-				<input type="text" name="complemento" id="complemento" style="width:365px; margin-left:8px;" class="form-control"/>
-				<label for="usuário" style="margin-left:77px;">CEP</label>
-				<input type="tel" pattern="^\d{5}-\d{3}$" required name="telResid" name="cep" id="cep" title="Informe um CEP válido no formato xxxx-xxx" class="form-control"/>
-			</div>
-			<div>
-				<label for="usuário">Cidade</label>
-				<input type="text" name="cidade" id="cidade" style="width:300px; margin-left:14px;" class="form-control"/>
-				<label for="usuário" style="margin-left:48px;">Natural</label>
-				<input type="text" name="naturalidade" id="naturalidade" style="margin-left:12px;" class="form-control"/>
-				<label for="usuário" style="margin-left:43px;">UF</label>
-				<input type="text" name="uf" id="uf" style="width:50px; margin-left:12px;" class="form-control"/>
-			</div>
-			<div>
-				<label for="usuário">País</label>
-				<input type="text" name="pais" id="pais" style="width:230px; margin-left:47px;" class="form-control"/>
-				<label for="usuário" style="margin-left:138px;">Nacionalidade</label>
-				<input type="text" name="nacionalidade" id="nacionalidade" style="width:200px;" class="form-control"/>
-			</div>
-			<div>
-				<label for="usuário">Telefone</label>
-				<input type="tel" pattern="^\d{2}$" required name="DDD" id="DDD" style="width:40px; margin-left:12px;" class="form-control"/>
-				<input type="tel" pattern="^\d{4}-\d{4}$" required name="telResid" id="telResid" style="margin-left:0px;" title="Informe um Celular com o formato xxxxx-xxxx" class="form-control"/>
-				
-				<label for="usuário" style="margin-left:70px;">Email</label>
-				<input type="email" value="" placeholder="nome@email.com" requiredame= "emailPessoal" id="emailPessoal" style="width:255px;" class="form-control"/>
-				
-			</div>
-			<div>
-				<label for="usuário">Celular </label>
-				<input type="tel" pattern="^\d{2}$"  name="DDD" id="DDD" style="width:40px; margin-left:30px;" class="form-control"/>
-								
-				<input type="tel" pattern="^\d{4}-\d{5}$"   name="telCel" id="telCel" style="margin-left:0px;" title="Informe um Celular com o formato xxxx-xxxxx" class="form-control"/>
-				
-				<label for="usuário" style="margin-left:64px;">Escolaridade</label>
-				<input type="text" name="escolaridade" id="escolaridade" style="width:300px; margin-left:10px;" class="form-control"/>
-			</div>
-			<div>
-				<label for="usuário">Cargo</label>
-				<input type="text" name="cargo" id="cargo" style="width:270px;" class="form-control"/>
-				<label for="usuário" style="margin-left:112px;">Tel Corporativo</label>
-				<input type="text" name="telCorporativo" id="telCorporativo" class="form-control"/>
-			</div>
-			<div>
-				<label for="usuário">Email Corporativo</label>
-				<<input type="email" value="" placeholder="nome@email.com" required name="emailCorporativo" id="emailCorporativo" style="width:360px; margin-left:10px;" class="form-control"/>
-				<label for="usuário" style="margin-left:20px;">Setor</label>
-				<input type="text" name="setor" id="setor" class="form-control"/>
-			</div>
-			
-			<div>
-			<input id="txtSenha" name="txtsenha" type="password" required placeholder="Digite uma Senha" title="Senha" />
-					<label for="repetir_senha">Confirmar Senha</label>
-					<input id="repetir_senha" name="repetir_senha" type="password" required  placeholder="Repetir Senha" title="Repetir Senha" oninput="validaSenha(this)" />
-					
-			</div>
-			<div>
-				<button type="submit" class="botao">Enviar</button>
-			</div>	 
-	 
-	</form>
-    </div>
-	</div>
-</div>
-
+		</div>
+	</div> <!-- div container -->
+</body> <!-- body id=all -->
 </html>
