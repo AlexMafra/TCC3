@@ -106,8 +106,7 @@
 							</div>
 							<div class="row">
 								<div class="form-group col-lg-12">
-									<button type="button" class="btn btn-primary" onClick="validar(document.form);">CANCELAR</button>
-									<button type="button" class="btn btn-primary" onClick="validar(document.form);">SALVAR</button>
+								<button type="submit" class="btn btn-primary" value="submit">ENVIAR</button>
 									<input name="ok" type="hidden" id="ok"></input>
 								</div>
 							</div>	

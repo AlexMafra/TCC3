@@ -51,9 +51,9 @@
 						<li class="active"><a href="#tab1" data-toggle="tab">CLIENTE</a></li>
 					</ul>
 					<div class="tab-content">
-					<div class="tab-pane active" id="tab1">
+					<div class="tab-pane active" id="tab1"><br>
 						<form name="f2" method="post" action="cadastro.php">
-						<!--<input hidden type="text" name="tipo" id="tipo" value="cliente" class="form-control"/>-->
+						<input type="hidden" name="tipo" id="tipo" value="cliente" class="form-control"/>
 							<div class="row">
 								<div class="form-group col-lg-8">
 									<label for="usuário">Nome</label>
@@ -61,7 +61,7 @@
 								</div>
 								<div class="form-group col-lg-4">
 									<label for="usuário">Nascimento</label>
-								<input required type="text" pattern="^\d{2}/\d{2}/\d{4}$" placeholder="xx/xx/xxxx" name="dataNascimento" id="dataNascimento" title="Informe uma data de nascimento válida no formato xx/xx/xxxx" class="form-control"/>
+									<input required type="text" pattern="^\d{2}/\d{2}/\d{4}$" placeholder="xx/xx/xxxx" name="dataNascimento" id="dataNascimento" title="Informe uma data de nascimento válida no formato xx/xx/xxxx" class="form-control"/>
 								</div>
 							</div>
 							<div class="row">
@@ -186,8 +186,7 @@
 							</div>
 							<div class="row">
 								<div class="form-group col-lg-12">
-									<button type="button" class="btn btn-primary" onClick="validar(document.form);">CANCELAR</button>
-									<button type="button" class="btn btn-primary" onClick="validar(document.form);">SALVAR</button>
+									<button type="submit" class="btn btn-primary" value="submit">SALVAR</button>
 									<input name="ok" type="hidden" id="ok"></input>
 								</div>
 							</div>	

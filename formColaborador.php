@@ -51,9 +51,9 @@
 						<li class="active"><a href="#tab1" data-toggle="tab">COLABORADOR</a></li>
 					</ul>
 					<div class="tab-content">
-					<div class="tab-pane active" id="tab1">
+					<div class="tab-pane active" id="tab1"><br>
 						<form name="f2" method="post" action="cadastro.php">
-						<!--<input hidden type="text" name="tipo" id="tipo" value="cliente" class="form-control"/>-->
+						<input type="hidden" name="tipo" id="tipo" value="colaborador" class="form-control"/>
 							<div class="row">
 								<div class="form-group col-lg-8">
 									<label for="usuário">Nome</label>
@@ -219,8 +219,7 @@
 							</div>
 							<div class="row">
 								<div class="form-group col-lg-12">
-									<button type="button" class="btn btn-primary" onClick="validar(document.form);">CANCELAR</button>
-									<button type="button" class="btn btn-primary" onClick="validar(document.form);">SALVAR</button>
+									<button type="submit" class="btn btn-primary" value="submit">SALVAR</button>
 									<input name="ok" type="hidden" id="ok"></input>
 								</div>
 							</div>	

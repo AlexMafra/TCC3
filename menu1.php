@@ -27,7 +27,7 @@
 				</div>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">INICIO</a></li>
+					<li class="active"><a href="sectionAgenda.php">INICIO</a></li>
 					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">CADASTRAR<span class="caret"></span></a>
 						<ul class="dropdown-menu">
 						  <li><a href="formCliente.php">CLIENTE</a></li>
@@ -37,14 +37,14 @@
 						  <li><a href="formProcesso.php">PROCESSO</a></li>
 						</ul>
 					</li>
-					<li class="active"><a href="#">AGENDA</a></li>
+					<li class="active"><a href="sectionAgenda.php">AGENDA</a></li>
 					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">CONSULTAR<span class="caret"></span></a>
 						<ul class="dropdown-menu">
-						  <li><a href="#">CLIENTE</a></li>
+						  <li><a href="consultaCliente.php">CLIENTE</a></li>
 						  <li role="separator" class="divider"></li>
-						  <li><a href="#">COLABORADOR</a></li>
+						  <li><a href="consultaColaborador.php">COLABORADOR</a></li>
 						  <li role="separator" class="divider"></li>
-						  <li><a href="#">PROCESSO</a></li>
+						  <li><a href="consultaProcesso.php">PROCESSO</a></li>
 						</ul>
 					</li>
 					<li class="active"><a href="#">FINANCEIRO</a></li>

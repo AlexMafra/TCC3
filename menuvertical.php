@@ -18,15 +18,15 @@
 							<li>INICIO</li>
 						</a>
 						<hr>
-						<a href="entrar.html">
+						<a href="#">
 							<li>ADVOGADOS</li>
 						</a>
 						<hr>
-						<a href="registrar.html">
+						<a href="#">
 							<li>CLIENTES</li>
 						</a>
 						<hr>
-						<a href="logout.html">
+						<a href="logout.php">
 							<li>SAIR</li>
 						</a>
 						<hr>

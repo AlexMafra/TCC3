@@ -1,5 +1,5 @@
 <?php
-//require_once("verificaSessao.php");
+require_once("verificaSessao.php");
 session_start();
 require_once('config/conn.php');
 date_default_timezone_set('America/Sao_Paulo');
@@ -77,17 +77,24 @@ switch ($mes) {
 }
 
 echo "<h1> $month / $ano</h1>";
-echo "<table border '1pt' bgcolor='white'" ;
-echo"<tr>";
-echo "<td> Domingo</td>";
-echo "<td> Segunda</td>";
-echo "<td> Terça</td>";
-echo "<td> Quarta</td>";
-echo "<td> Quinta</td>"; 
-echo "<td> Sexta</td>";
-echo "<td> Sábado</td>";
-echo"</tr>";
+?>
 
+<table class="table table-hover table-bordered">
+    <thead>
+      <tr>
+        <th>Domingo</th>
+        <th>Segunda</th>
+        <th>Terça</th>
+		<th>Quarta</th>
+        <th>Quinta</th>
+        <th>Sexta</th>
+		<th>Sábado</th>
+      </tr>
+	</thead>
+    <tbody>
+
+
+<?php
 	while ( $dia <= date("t", mktime(0, 0, 0, $mes, 1, $ano) ) ) {
 		if ( $pos == 0 )
 			echo "<tr>" ;
@@ -96,8 +103,8 @@ echo"</tr>";
 			}
 		
 		if ( date( "w", mktime(0, 0, 0, $mes, $dia, $ano) ) == $pos ) {
-			echo $dia ;
-			echo "<br><a href='formAgenda2.php?dia=$dia&mes=$mes&ano=$ano'> Adcionar Evento </a> <br>";
+			echo "<h2>".$dia."</h2>";
+			echo "<br><a href='formAgenda2.php?dia=$dia&mes=$mes&ano=$ano'> Adicionar Evento </a> <br>";
 			$nhr = $pdo->query("SELECT cpfCliente, horario from agenda WHERE dia=$dia AND mes=$mes AND cpfColaborador=$cpf");
 			while ($sdf = $nhr->fetch()){
 				$ctr=$sdf["cpfCliente"];
@@ -115,15 +122,12 @@ echo"</tr>";
 		}
 		
 	echo "</td>" ;
-
 	$pos++;
 		if ($pos == 7) {
-
 			echo "</tr>" ;
 			$pos = 0 ;
 		}
 	}
-echo "</table>" ;
-
-
+	echo "</tbody>" ;
+echo "</table>" ;	
 ?>

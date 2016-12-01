@@ -1,6 +1,5 @@
 <?php
 require_once ("verificaSessao.php");
-include_once ("principal2.php");
 ?>
 <html lang="pt-br">
 <head>
@@ -23,27 +22,64 @@ include_once ("principal2.php");
 		}
 	</script>
 </head>
-	<body onload="agenda2(); agenda()"  >
-	<div id="section">
-		<div class="tabs-container">
-    
-		<!-- ABA 1 -->
-		<input type="radio" name="tabs" class="tabs" id="tab1" checked>
-		<label for="tab1">AGENDA</label>
-		<div>
-			<div id="metade1">
-				<h1> Agenda do dia atual</h1>
-				
-				<p id="dia">
-			</div>
-			
-			<div id="metade2">
-				<h1> Agenda do dia posterior</h1>
-				<p id="dia1">
-				
+<body id="all" onload="agenda2(); agenda()">
+	<div class="container">
+		<div class="row center-block">
+			<div class="col-lg-12">
+			<?php 
+				include_once ("menu0.php");
+			?>
 			</div>
 		</div>
+		<div class="row center-block">
+			<div class="col-lg-12">
+			<?php 
+				include_once ("menu1.php");
+			?>
+			</div>
 		</div>
-	</div>
-</body>
+
+		<div class="row center-block">
+			<div class="col-lg-2">
+			<?php 
+				include_once ("menuvertical.php");
+			?>
+			</div>
+			<div class="col-lg-10">
+				<div id="page-wrapper">
+					<div class="col-lg-12">
+					<div class="tabbable"> <!-- Only required for left/right tabs -->
+					<ul class="nav nav-tabs nav-pills">
+						<li class="active"><a href="#tab1" data-toggle="tab">AGENDA</a></li>
+					</ul>
+					<div class="tab-content">
+					<div class="tab-pane active" id="tab1"><br>
+						<form>
+									<div class="row">
+										<div class="col-lg-6" style="background-color:red">
+											<h2> Agenda do dia atual</h2>
+											<p id="dia">
+										</div>
+										<div class="col-lg-6" style="background-color:yellow">
+											<h2> Agenda do dia posterior</h2>
+											<p id="dia1">
+										</div>
+									</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- div page-wrapper -->
+			</div> <!-- col-lg-10 -->
+		</div> <!-- row -->
+		<div class="row4 center-block">
+			<div class="col-lg-12">
+			<?php 
+				include_once ("rodape.php");
+			?>
+			</div>
+		</div>
+	</div> <!-- div container -->
+</body> <!-- body id=all -->
 </html>

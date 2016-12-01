@@ -82,6 +82,3 @@
 	</div> <!-- div container -->
 </body> <!-- body id=all -->
 </html>
-<?php
-include_once ("rodape.php");
-?>
