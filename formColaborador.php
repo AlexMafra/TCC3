@@ -61,13 +61,13 @@
 								</div>
 								<div class="form-group col-lg-4">
 									<label for="usuário">Nascimento</label>
-								<input required type="text" pattern="^\d{2}/\d{2}/\d{4}$" placeholder="xx/xx/xxxx" name="dataNascimento" id="dataNascimento" title="Informe uma data de nascimento válida no formato xx/xx/xxxx" class="form-control"/>
+									<input required type="text" pattern="^\d{2}/\d{2}/\d{4}$" placeholder="xx/xx/xxxx" name="dataNascimento" id="dataNascimento" title="Informe uma data de nascimento válida no formato xx/xx/xxxx" class="form-control"/>
 								</div>
 							</div>
 							<div class="row">
 								<div class="form-group col-lg-4">
 									<label>Sexo</label>
-									<select class="form-control" name="sexo" title="O campo Sexo &eacute; obrigat&oacute;rio">
+									<select name="sexo" id="sexo" class="form-control" >
 										<option value=""></option>
 										<option value="F">Feminino</option>
 										<option value="M">Masculino</option>
@@ -88,7 +88,7 @@
 								</div>
 								<div class="form-group col-lg-4">
 									<label for="usuário">RG</label>
-									<input required type="tel" pattern="^\d{9}$"name="rg" placeholder="xx.xxx.xxx-x" id="rg" title="Informe um rg válido somente os numeros" class="form-control"/>
+									<input required type="tel" pattern="^\d{9}$" name="rg" placeholder="xx.xxx.xxx-x" id="rg" title="Informe um rg válido somente os numeros" class="form-control"/>
 								</div>
 								<div class="form-group col-lg-4">
 									<label for="usuário">Emissor</label>
@@ -98,21 +98,21 @@
 							<div class="row" >
 								<div class="form-group col-lg-8">
 									<label>Endere&ccedil;o</label>
-									<input type="text" name="endereco" class="form-control" title="O campo Endere&ccedil;o &eacute; obrigat&oacute;rio" value="<?php echo $_POST['endereco']; ?>" />
+									<input type="text" name="endereco" id="endereco" class="form-control" />
 								</div>
 								<div class="form-group col-lg-4">
 									<label>Bairro</label>
-									<input type="text" name="bairro" class="form-control" title="O campo Bairro &eacute; obrigat&oacute;rio" value="<?php echo $_POST['bairro']; ?>" />
+									<input type="text" name="bairro" id="bairro" class="form-control" />
 								</div>
 							</div>
 							 <div class="row" >
 								<div class="form-group col-lg-8">
 									<label>Complemento</label>
-									<input type="text" name="complemento" class="form-control" value="<?php echo $_POST['complemento']; ?>" />
+									<input type="text" name="complemento" id="complemento" class="form-control"/>
 								</div>
 								<div class="form-group col-lg-4">
 									<label>CEP</label>
-									<input name="cep" type="text" class="form-control" id="cep"  title="O campo CEP &eacute; obrigat&oacute;rio" onKeyPress="return Mascaras_Format(document.form,'cep','99.999-999',event);" value="<?php echo $_POST['cep']; ?>" maxlength="10" placeholder="" />
+									<input type="tel" pattern="^\d{5}-\d{3}$" required name="cep" id="cep" placeholder="xx.xxx-xxx" class="form-control"/>
 								</div>
 							</div>
 							<div class="row">
@@ -126,7 +126,36 @@
 								</div>
 								<div class="form-group col-lg-2">
 									<label for="usuário">UF</label>
-									<input type="text" name="uf" id="uf" class="form-control"/>
+									<select type="text" name="uf" id="uf" class="form-control"/> 
+										<option> </option>
+										<option>AC</option> 
+										<option>AL</option> 
+										<option>AP</option> 
+										<option>AM</option> 
+										<option>BA</option> 
+										<option>CE</option> 
+										<option>DF</option> 
+										<option>ES</option> 
+										<option>GO</option> 
+										<option>MA</option>
+										<option>MT</option> 
+										<option>MS</option> 
+										<option>MG</option> 
+										<option>PA</option> 
+										<option>PB</option>
+										<option>PR</option> 
+										<option>PE</option> 
+										<option>PI</option> 
+										<option>RJ</option> 
+										<option>RN</option>
+										<option>RS</option> 
+										<option>RO</option> 
+										<option>RR</option> 
+										<option>SC</option> 
+										<option>SP</option>
+										<option>SE</option> 
+										<option>TO</option>
+								  </select>
 								</div>
 							</div>
 							<div class="row">
@@ -145,7 +174,7 @@
 							<div class="row">
 								<div class="form-group col-lg-4">
 									<label>Telefone</label>
-									<input name="telefone" type="text" class="form-control" id="telefone" title="Campo Telefone &eacute; obrigat&oacute;rio" onKeyPress="return Mascaras_Format(document.form,'telefone','(99) 9999-9999',event);" value="<?php echo $_POST['telefone']; ?>" maxlength="14" placeholder="" />
+									<input type="tel" pattern="^\d{2}-\d{4}-\d{4}$" required name="telResid" id="telResid" maxlength="10" placeholder="xx-xxxx-xxxx" class="form-control"/>
 								</div>
 								<div class="form-group col-lg-2">
 								</div>
@@ -157,7 +186,7 @@
 							<div class="row">
 								<div class="form-group col-lg-4">
 									<label>Celular</label>
-									<input name="celular" type="text" class="form-control" id="celular" title="Campo celular &eacute; obrigat&oacute;rio" onKeyPress="return Mascaras_Format(document.form,'celular','(99) 99999-9999',event);" value="<?php echo $_POST['celular']; ?>" maxlength="15" placeholder="" />
+									<input type="tel" pattern="^\d{2}-\d{1}-\d{4}-\d{4}$" required name="telCel" id="telCel" maxlength="11" placeholder="xx-x-xxxx-xxxx" class="form-control"/>
 								</div>
 								<div class="form-group col-lg-2">
 								</div>
@@ -180,29 +209,29 @@
 								</div>
 							</div>
 							<div class="row">
-								<div class="form-group col-lg-5">
-									<label for="usuário">Cargo</label>
-									<input type="text" name="cargo" id="cargo" class="form-control"/>
-								</div>
-								<div class="form-group col-lg-2">
-									
-								</div>
-								<div class="form-group col-lg-5">
-									<label for="usuário">Tel Corporativo</label>
-									<input name="telCorporativo" type="text" class="form-control" id="telCorporativo" title="Campo Telefone &eacute; obrigat&oacute;rio" onKeyPress="return Mascaras_Format(document.form,'telefone','(99) 9999-9999',event);" value="<?php echo $_POST['telCorporativo']; ?>" maxlength="14" placeholder="" />
-								</div>
-							</div>
-							<div class="row">
-								<div class="form-group col-lg-6">
-									<label for="usuário">Email Corporativo</label>
-									<input type="email" value="" placeholder="nome@email.com" required name="emailCorporativo" id="emailCorporativo" class="form-control"/>
-								</div>
-								<div class="form-group col-lg-2">
-									
-								</div>
 								<div class="form-group col-lg-4">
 									<label for="usuário">Setor</label>
 									<input type="text" name="setor" id="setor" class="form-control"/>
+								</div>			
+								<div class="form-group col-lg-2">
+									
+								</div>
+								<div class="form-group col-lg-6">
+									<label for="usuário">Cargo</label>
+									<input type="text" name="cargo" id="cargo" class="form-control"/>
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-lg-4">
+									<label for="usuário">Tel Corporativo</label>
+									<input type="tel" pattern="^\d{2}-\d{4}-\d{4}$" required name="telCorporativo" id="telCorporativo" maxlength="10" placeholder="xx-xxxx-xxxx" class="form-control"/>
+								</div>
+								<div class="form-group col-lg-2">
+									
+								</div>
+								<div class="form-group col-lg-6">
+									<label for="usuário">Email Corporativo</label>
+									<input type="email" value="" placeholder="nome@email.com" required name="emailCorporativo" id="emailCorporativo" class="form-control"/>
 								</div>
 							</div>
 							<div class="row">
