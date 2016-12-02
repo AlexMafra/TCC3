@@ -36,7 +36,7 @@ $stmt = $pdo->query("select * from agenda where cpfcolaborador = $tr");
 		<div class="row center-block">
 			<div class="col-lg-2">
 			<?php 
-				include_once ("menuvertical.php");
+				include_once ("menuAgenda.php");
 			?>
 			</div>
 			<div class="col-lg-10">

@@ -15,19 +15,19 @@
 						<h1>Agenda</h1><br>
 						<hr>
 						<a href="sectionAgenda.php">
-							<li>Inicio</li>
+							<li>INICIO</li>
 						</a>
 						<hr>
 						<a href="sectionagenda2.php">	
-							<li>Agendar</li>
+							<li>AGENDAR</li>
 						</a>
 						<hr> 
 						<a href="consultaagenda.php">
-							<li>Pesquisar</li>
+							<li>PESQUISAR</li>
 						</a>
 						<hr>
 						<a href="logout.php">
-							<li>Sair</li>
+							<li>SAIR</li>
 						</a>
 						<hr>
 					</ul>
