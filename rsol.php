@@ -3,7 +3,8 @@ require_once ("verificaSessao.php");
 include_once ("principal2.php");
 require_once('config/conn.php');
 $tr=$_SESSION['usuario'];
-$stmt = $pdo->query("select * from processo");
+$tr=10794615740;
+$stmt = $pdo->query("select * from solicitacao where cpfcliente=$tr and status = true;");
 ?>
 <html lang="pt-br">
 <head>
@@ -34,26 +35,26 @@ $stmt = $pdo->query("select * from processo");
 			<table border = 3>
 			
 			<tr>
-                        <td>Processo</td>
-                        <td>Cliente</td>
+                        <td>Solicitante</td>
+                        <td>Tipo de Documento</td>
 						
 						
             </tr>
 			
 			<?php while ($lista = $stmt->fetchObject()): ?>
 			<?php 
-				$ct=$lista->cpf;
-				$nuser = $pdo->query("SELECT nome FROM cliente WHERE cpf='$ct'");
+				$ct=$lista->cpfColaborador;
+				$nuser = $pdo->query("SELECT nome FROM colaborador WHERE cpf='$ct'");
 				$ftsr = $nuser->fetch();
 		
 			?>
             <tr>
                         
-						<td> <?php echo $lista->numero ?>  </td>
+						<td> <?php echo $lista->tipoDoc ?>  </td>
 						<td> <?php echo $ftsr['nome'] ?>  </td>
 						
-						<td> <a href="detalheprocesso.php?cpc=<?php echo $lista->numero?>"> <img src = "lp.jpg"> </a> </td>
-						<td> <a target="_blank" href="http://www4.tjrj.jus.br/consultaProcessoWebV2/consultaProc.do?v=2&numProcesso=<?php echo $lista->numero ?>">Pesquisar no Site do TJ</a> </td>'
+						<td> <a href="enviar.php?tipo=<?php echo $lista->tipodoc?>"> <img src = "lp.jpg"> </a> </td>
+						
             </tr>
 			<?php endwhile ?>	
 			</table>

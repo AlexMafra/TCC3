@@ -1,5 +1,6 @@
 <?php
 	require_once('config/conn.php');
+	require_once ("verificaSessao.php");
 
 	$numproc= $_POST["numeroproc"];
 	$origem= $_POST["origem"];
@@ -23,7 +24,7 @@
 		$insere->bindParam( ":assunto", $assunto, PDO::PARAM_STR);
 		$insere->bindParam( ":advogado", $adv, PDO::PARAM_STR);
 		$insere->bindParam( ":origem", $origem, PDO::PARAM_STR);
-		$insere->bindParam( ":origem", $cpfadv, PDO::PARAM_STR);
+		$insere->bindParam( ":cpfadv", $cpfadv, PDO::PARAM_STR);
 		
 		$inserir = $insere->execute();		
 if( $inserir ) {
