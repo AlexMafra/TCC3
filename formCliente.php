@@ -101,8 +101,8 @@
 									<input type="text" name="endereco" id="endereco" class="form-control" />
 								</div>
 								<div class="form-group col-lg-4">
-									<label>Bairro</label>
-									<input type="text" name="bairro" id="bairro" class="form-control" />
+									<label>CEP</label>
+									<input type="tel" pattern="^\d{5}-\d{3}$" required name="cep" id="cep" placeholder="xx.xxx-xxx" class="form-control"/>
 								</div>
 							</div>
 							 <div class="row" >
@@ -111,8 +111,8 @@
 									<input type="text" name="complemento" id="complemento" class="form-control"/>
 								</div>
 								<div class="form-group col-lg-4">
-									<label>CEP</label>
-									<input type="tel" pattern="^\d{5}-\d{3}$" required name="cep" id="cep" placeholder="xx.xxx-xxx" class="form-control"/>
+									<label>Bairro</label>
+									<input type="text" name="bairro" id="bairro" class="form-control" />
 								</div>
 							</div>
 							<div class="row">

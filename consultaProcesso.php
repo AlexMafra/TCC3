@@ -51,12 +51,12 @@ $stmt = $pdo->query("select * from processo");
 						<div class="tab-content">
 							<div class="tab-pane active" id="tab1"><br>
 							
-							<div class="row">
+							<!--<div class="row">
 								<div class="col-lg-4">
 								<label for="usuário">CPF</label>
 								<input type="text" name="cpf" id="cpf" required class="form-control"/>
 								</div>
-							</div><br>
+							</div><br>-->
 								<table class="table table-hover table-bordered">
 								<thead>
 								  <tr>

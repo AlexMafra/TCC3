@@ -105,7 +105,7 @@ echo "<h1> $month / $ano</h1>";
 		if ( date( "w", mktime(0, 0, 0, $mes, $dia, $ano) ) == $pos ) {
 			echo "<h2>".$dia."</h2>";
 			echo "<br><a href='formAgenda2.php?dia=$dia&mes=$mes&ano=$ano'> Adicionar Evento </a> <br>";
-			$nhr = $pdo->query("SELECT cpfCliente, horario from agenda WHERE dia=$dia AND mes=$mes AND cpfColaborador=$cpf");
+			$nhr = $pdo->query("SELECT cpfCliente, horario from agenda WHERE dia=$dia AND mes=$mes AND cpfColaborador=$cpf order by horario");
 			while ($sdf = $nhr->fetch()){
 				$ctr=$sdf["cpfCliente"];
 				if (isset ($ctr)){
@@ -113,7 +113,7 @@ echo "<h1> $month / $ano</h1>";
 				$sd = $nh->fetch();
 				
 				}
-			echo "Cliente ", $sd["nome"]," Horario--", $sdf["horario"],":00<br>";
+			echo "Cliente: ", $sd["nome"],"\nHorario: ", $sdf["horario"],":00<br>";
 			}
 			
 			$dia++;

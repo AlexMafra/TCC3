@@ -14,11 +14,11 @@ require_once ("verificaSessao.php");
 	<script>
 		function agenda() {
 			document.getElementById("dia").innerHTML = "<?php
-				include("agendadodia.php");?>";
+				include("agendaDoDia.php");?>";
 		}
 		function agenda2() {
 			document.getElementById("dia1").innerHTML = "<?php
-				include("agendadodia2.php");?>";
+				include("agendaDoDia2.php");?>";
 		}
 	</script>
 </head>

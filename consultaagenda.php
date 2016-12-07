@@ -73,7 +73,7 @@ $stmt = $pdo->query("select * from agenda where cpfcolaborador = $tr");
 											<td> <?php echo $troca->dia ?>  </td>
 											<td> <?php echo $troca->mes ?>  </td>
 											<td> <?php echo $troca->ano ?>  </td>
-											<td> <?php echo $troca->horario ?>  </td>
+											<td> <?php echo $troca->horario,":00" ?>  </td>
 											
 											<td> <a href="rejeita.php?dia=<?php echo $troca->dia?>&ano=<?php echo $troca->ano?>&mes=<?php echo $troca->mes?>&horario=<?php echo $troca->horario?>&cpfcliente=<?php echo $ct?>"> <img src = "x.png"> </a> </td>
 								</tr>

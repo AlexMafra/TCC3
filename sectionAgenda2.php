@@ -49,20 +49,22 @@
 						<li class="active"><a href="#tab1" data-toggle="tab">AGENDA</a></li>
 					</ul>
 					<div class="tab-content">
-					<div class="tab-pane active" id="tab1">
+					<div class="tab-pane active" id="tab1">	
 					<nav aria-label="Page navigation">
 					  <center><ul class="pagination">
-						<li><a onclick="carregar('preparaagenda.php?var=-1')" href="#">Mês Anterior</a></li>
-						<li><a onclick="carregar('preparaagenda.php')" href="#">Mês Atual</a></li>
-						<li><a onclick="carregar('preparaagenda.php?var=1')" href="#">Próximo Mês</a></li>
+						<li><a onclick="carregar('preparaagenda.php?var=-1')" href="#">Anterior</a></li>
+						<li><a onclick="carregar('preparaagenda.php')" href="#">Atual</a></li>
+						<li><a onclick="carregar('preparaagenda.php?var=1')" href="#">Próximo</a></li>
 					  </ul></center>
 					</nav>
+					<div class="table-responsive">
 						<div id="conteudo"></div>
+					</div>
 					<nav aria-label="Page navigation">
 					  <center><ul class="pagination">
-						<li><a onclick="carregar('preparaagenda.php?var=-1')" href="#">Mês Anterior</a></li>
-						<li><a onclick="carregar('preparaagenda.php')" href="#">Mês Atual</a></li>
-						<li><a onclick="carregar('preparaagenda.php?var=1')" href="#">Próximo Mês</a></li>
+						<li><a onclick="carregar('preparaagenda.php?var=-1')" href="#">Anterior</a></li>
+						<li><a onclick="carregar('preparaagenda.php')" href="#">Atual</a></li>
+						<li><a onclick="carregar('preparaagenda.php?var=1')" href="#">Próximo</a></li>
 					  </ul></center>
 					</nav>
 					</div>
