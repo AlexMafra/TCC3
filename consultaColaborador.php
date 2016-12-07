@@ -50,6 +50,7 @@ $stmt = $pdo->query("select * from colaborador");
 						</ul>
 						<div class="tab-content">
 							<div class="tab-pane active" id="tab1"><br>
+							<div class="table-responsive">
 								<table class="table table-hover table-bordered">
 								<thead>
 								  <tr>
@@ -75,6 +76,7 @@ $stmt = $pdo->query("select * from colaborador");
 								<?php endwhile ?>
 								</tbody>
 								</table>
+							</div>
 							</div>						
 						</div>
 						</div>

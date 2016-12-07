@@ -50,7 +50,7 @@ $stmt = $pdo->query("select * from processo");
 						</ul>
 						<div class="tab-content">
 							<div class="tab-pane active" id="tab1"><br>
-							
+							<div class="table-responsive">
 							<!--<div class="row">
 								<div class="col-lg-4">
 								<label for="usuário">CPF</label>
@@ -82,6 +82,7 @@ $stmt = $pdo->query("select * from processo");
 								<?php endwhile ?>
 								</tbody>
 								</table>
+							</div>
 							</div>						
 						</div>
 						</div>
