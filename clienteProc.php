@@ -68,7 +68,7 @@ $stmt = $pdo->query("select * from processo");
 								<tbody>
 								<?php while ($lista = $stmt->fetchObject()): ?>	
 								<?php 
-									$ct=$lista->cpfCliente;
+									$ct=$lista->cpf;
 									$nuser = $pdo->query("SELECT nome FROM cliente WHERE cpf='$ct'");
 									$ftsr = $nuser->fetch();
 									
