@@ -36,7 +36,7 @@ $(document).ready( function() {
 						$('#cep').val(data.emailpessoal);
 			
 						
-                        $('#nome').focus();
+                       
                     }
                 }
            });   

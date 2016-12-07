@@ -5,52 +5,53 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="boots.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   
 </head>
 <body>
-<nav class="navbar navbar-inverse">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<li><a class="navbar-brand">
-						<!--<img alt="Thompson & Vasconcellos" src="LogoTCC2.jpg">-->
-					</a></li>
-				</div>
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav">
-					<li class="active"><a href="sectionAgenda.php">INICIO</a></li>
-					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">CADASTRAR<span class="caret"></span></a>
-						<ul class="dropdown-menu">
-						  <li><a href="formCliente.php">CLIENTE</a></li>
-						  <li role="separator" class="divider"></li>
-						  <li><a href="formColaborador.php">COLABORADOR</a></li>
-						  <li role="separator" class="divider"></li>
-						  <li><a href="formProcesso.php">PROCESSO</a></li>
-						</ul>
-					</li>
-					<li class="active"><a href="sectionAgenda.php">AGENDA</a></li>
-					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">CONSULTAR<span class="caret"></span></a>
-						<ul class="dropdown-menu">
-						  <li><a href="consultaCliente.php">CLIENTE</a></li>
-						  <li role="separator" class="divider"></li>
-						  <li><a href="consultaColaborador.php">COLABORADOR</a></li>
-						  <li role="separator" class="divider"></li>
-						  <li><a href="consultaProcesso.php">PROCESSO</a></li>
-						</ul>
-					</li>
-					<li class="active"><a href="#">FINANCEIRO</a></li>
+	<div id="header">
+		<a href="sectionAgenda.php">
+			<CENTER><img src="LogoTCC.jpg" alt="Thompson & Vasconcellos"></CENTER>
+		</a>
+	   <div id="navH">
+            <ul id="menuH">
+			
+            <li>CADASTRAR
+				<ul id="menuM">
+					<a href="formCliente.php">
+					<li>CLIENTE</li>
+					</a>
+					<a href="formColaborador.php">
+					<li>COLABORADOR</li>
+					</a>
+					<a href="formProcesso.php">
+					<li>PROCESSO</li>
+					</a>
 				</ul>
-			</div>
-</nav>
+			</li>
+			
+            <a href="sectionAgenda.php"><li>AGENDA</li></a>
+            
+            <li>CONSULTA
+				<ul>
+					<a href="consultaCliente.php">
+					<li>CLIENTE</li>
+					</a>
+					<a href="consultaColaborador.php">
+					<li>COLABORADOR</li>
+					</a>
+					<a href="consultaProcesso.php">
+					<li>PROCESSO</li>
+					</a>
+				</ul>
+			</li>
+            
+            <a href="financeiro.php"><li>FINANCEIRO</li></a>
+            
+			</ul>
+		</div>
+    </div>
+ 
 
 </body>
 </html>

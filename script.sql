@@ -65,15 +65,18 @@ create table agenda (
  ano integer,
  horario integer,
  cpfColaborador varchar(11),
- cpfCliente varchar(11)
+ cpfCliente varchar(11),
+ dsp true;
 );
 
 create table financeiro(
-numeroProcesso int,
-idCliente int(4),
-valor int,
-idColaborador int(4),
-titulo int
+numeroProcesso varchar(25),
+idCliente varchar(11),
+valor double,
+idColaborador varchar(11),
+titulo varchar,
+dia date,
+tipo char(1)
 );
 
 create table processo(
@@ -100,4 +103,12 @@ CREATE TABLE fotos (
 create table atendimento(
 cpfCliente 	varchar(11),
 cpfColaborador 	varchar(11)
+);
+
+create table solcitacao(
+cpfCliente 	varchar(11),
+cpfColaborador 	varchar(11),
+tipoDoc varchar (20),
+mensagem varchar (100),
+status true
 );
