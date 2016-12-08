@@ -110,21 +110,21 @@ while ($lista = $stmt->fetchObject()):
 								</div>
 								<div class="form-group col-lg-4">
 									<label>Bairro</label>
-									<input type="text" name="bairro" id="bairro" class="form-control" />
+									<input type="text" name="bairro" id="bairro" value = "<?php echo $lista->bairro; ?>" class="form-control" />
 								</div>
 							</div>
 							<div class="row">
 								<div class="form-group col-lg-5">
 									<label for="usuário">Cidade</label>
-									<input type="text" name="cidade" id="cidade" class="form-control"/>
+									<input type="text" name="cidade" id="cidade" value = "<?php echo $lista->cidade; ?>" class="form-control"/>
 								</div>
 								<div class="form-group col-lg-5">
 									<label for="usuário">Natural</label>
-									<input type="text" name="naturalidade" id="naturalidade" class="form-control"/>
+									<input type="text" name="naturalidade" id="naturalidade" value = "<?php echo $lista->naturalidade; ?>" class="form-control"/>
 								</div>
 								<div class="form-group col-lg-2">
 									<label for="usuário">UF</label>
-									<select type="text" name="uf" id="uf" class="form-control"/> 
+									<select type="text" name="uf" id="uf" value = "<?php echo $lista->uf; ?>" class="form-control"/> 
 										<option> </option>
 										<option>AC</option> 
 										<option>AL</option> 
@@ -159,54 +159,54 @@ while ($lista = $stmt->fetchObject()):
 							<div class="row">
 								<div class="form-group col-lg-4">
 									<label for="usuário">Pa&iacute;s</label>
-									<input type="text" name="pais" id="pais" class="form-control"/>
+									<input type="text" name="pais" id="pais" value = "<?php echo $lista->pais; ?>" class="form-control"/>
 								</div>
 								<div class="form-group col-lg-4">
 									
 								</div>
 								<div class="form-group col-lg-4">
 									<label for="usuário">Nacionalidade</label>
-									<input type="text" name="nacionalidade" id="nacionalidade" class="form-control"/>
+									<input type="text" name="nacionalidade" id="nacionalidade" value = "<?php echo $lista->nacionalidade; ?>" class="form-control"/>
 								</div>
 							</div>
 							<div class="row">
 								<div class="form-group col-lg-4">
 									<label>Telefone</label>
-									<input type="tel" name="telResid" id="telResid" maxlength="10" class="form-control"/>
+									<input type="tel" name="telResid" id="telResid" maxlength="10" value = "<?php echo $lista->telResid; ?>" class="form-control"/>
 								</div>
 								<div class="form-group col-lg-2">
 								</div>
 								<div class="form-group col-lg-6">
 									<label for="usuário">Email</label>
-									<input type="email" name= "emailPessoal" id="emailPessoal" class="form-control"/>
+									<input type="email" name= "emailPessoal" id="emailPessoal" value = "<?php echo $lista->emailPessoal; ?>" class="form-control"/>
 								</div>
 							</div>
 							<div class="row">
 								<div class="form-group col-lg-4">
 									<label>Celular</label>
-									<input type="tel" name="telCel" id="telCel" maxlength="11" class="form-control"/>
+									<input type="tel" name="telCel" id="telCel" maxlength="11" value = "<?php echo $lista->telCel; ?>" class="form-control"/>
 								</div>
 								<div class="form-group col-lg-2">
 								</div>
 								<div class="form-group col-lg-6">
 									<label for="usuário">Escolaridade</label>
-									<input type="text" name="escolaridade" id="escolaridade" class="form-control"/>
+									<input type="text" name="escolaridade" id="escolaridade" value = "<?php echo $lista->escolaridade; ?>" class="form-control"/>
 								</div>
 							</div>
 							<div class="row">
 								<div class="form-group col-lg-6">
 									<label for="usuário">Profissão</label>
-									<input type="text" name="profissao" id="profissao" class="form-control"/>
+									<input type="text" name="profissao" id="profissao" value = "<?php echo $lista->profissao; ?>" class="form-control"/>
 								</div>
 							</div>
 							<div class="row">
 								<div class="form-group col-lg-6">
 									<label for="txtsenha">Senha</label>
-									<input id="txtSenha" name="txtsenha" type="password" title="Senha" class="form-control"/>
+									<input id="txtSenha" name="txtsenha" type="password" title="Senha" value = "<?php echo $lista->txtsenha; ?>" class="form-control"/>
 								</div>
 								<div class="form-group col-lg-6">
 									<label for="repetir_senha">Confirmar Senha</label>
-									<input id="repetir_senha" name="repetir_senha" type="password" title="Repetir Senha" oninput="validaSenha(this)" class="form-control"/>
+									<input id="repetir_senha" name="repetir_senha" type="password" title="Repetir Senha" value = "<?php echo $lista->repetir_senha; ?>" oninput="validaSenha(this)" class="form-control"/>
 								</div>
 							</div>
 							<div class="row">
